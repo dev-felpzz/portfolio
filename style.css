@@ -1,0 +1,46 @@
+.parallax {
+  height: 80vh;
+  width: 100%;
+
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+
+  transition: background-image 0.4s ease;
+
+  /* imagem padrão (modo escuro) */
+  background-image: url("img/parallax-dark.jpg");
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: relative;
+  overflow: hidden;
+}
+
+/* Overlay escuro */
+.parallax::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+}
+
+/* Conteúdo acima do overlay */
+.parallax-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: white;
+}
+
+/* ☀️ Tema Claro */
+html.light .parallax {
+  background-image: url("img/parallax-light.jpg");
+}
+
+/* Overlay mais leve no modo claro */
+html.light .parallax::before {
+  background: rgba(255, 255, 255, 0.25);
+}
