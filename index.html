@@ -163,6 +163,7 @@
 
       .skill-progress {
         height: 100%;
+        width: 0;
         border-radius: 4px;
         background: linear-gradient(90deg, var(--primary), var(--accent-dark));
         transition: width 1s ease-in-out;
@@ -633,6 +634,7 @@
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+          <!-- Habilidades Técnicas -->
           <div>
             <h3 class="text-2xl font-bold mb-6">Habilidades Técnicas</h3>
             <div class="space-y-6">
@@ -642,30 +644,33 @@
                   <span>80%</span>
                 </div>
                 <div class="skill-bar">
-                  <div class="skill-progress" style="width: 95%"></div>
+                  <div class="skill-progress" data-percent="80"></div>
                 </div>
               </div>
+
               <div>
                 <div class="flex justify-between mb-2">
                   <span class="font-medium">JavaScript</span>
                   <span>40%</span>
                 </div>
                 <div class="skill-bar">
-                  <div class="skill-progress" style="width: 70%"></div>
+                  <div class="skill-progress" data-percent="40"></div>
                 </div>
               </div>
+
               <div>
                 <div class="flex justify-between mb-2">
                   <span class="font-medium">BootStrap</span>
                   <span>50%</span>
                 </div>
                 <div class="skill-bar">
-                  <div class="skill-progress" style="width: 50%"></div>
+                  <div class="skill-progress" data-percent="50"></div>
                 </div>
               </div>
             </div>
           </div>
 
+          <!-- Habilidades Profissionais -->
           <div>
             <h3 class="text-2xl font-bold mb-6">Habilidades Profissionais</h3>
             <div class="space-y-6">
@@ -675,85 +680,29 @@
                   <span>90%</span>
                 </div>
                 <div class="skill-bar">
-                  <div class="skill-progress" style="width: 90%"></div>
+                  <div class="skill-progress" data-percent="90"></div>
                 </div>
               </div>
+
               <div>
                 <div class="flex justify-between mb-2">
                   <span class="font-medium">Trabalho em equipe</span>
                   <span>85%</span>
                 </div>
                 <div class="skill-bar">
-                  <div class="skill-progress" style="width: 85%"></div>
+                  <div class="skill-progress" data-percent="85"></div>
                 </div>
               </div>
+
               <div>
                 <div class="flex justify-between mb-2">
                   <span class="font-medium">Solução de problemas</span>
                   <span>80%</span>
                 </div>
                 <div class="skill-bar">
-                  <div class="skill-progress" style="width: 95%"></div>
+                  <div class="skill-progress" data-percent="80"></div>
                 </div>
               </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="mt-16">
-          <h3 class="text-2xl font-bold mb-8 text-center">
-            Ferramentas & <span class="gradient-text">Tecnologias</span>
-          </h3>
-          <div
-            class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6"
-          >
-            <div
-              class="flex flex-col items-center p-6 bg-slate-800 rounded-lg card-hover"
-            >
-              <i class="fab fa-html5 text-4xl text-orange-500 mb-2"></i>
-              <span>HTML5</span>
-            </div>
-            <div
-              class="flex flex-col items-center p-6 bg-slate-800 rounded-lg card-hover"
-            >
-              <i class="fab fa-css3-alt text-4xl text-blue-500 mb-2"></i>
-              <span>CSS3</span>
-            </div>
-            <div
-              class="flex flex-col items-center p-6 bg-slate-800 rounded-lg card-hover"
-            >
-              <i class="fas fa-database text-4xl text-blue-400 mb-2"></i>
-              <span>MySQL</span>
-            </div>
-            <div
-              class="flex flex-col items-center p-6 bg-slate-800 rounded-lg card-hover"
-            >
-              <i class="fab fa-java text-4xl text-red-500 mb-2"></i>
-              <span>Java</span>
-            </div>
-            <div
-              class="flex flex-col items-center p-6 bg-slate-800 rounded-lg card-hover"
-            >
-              <i class="fab fa-wordpress text-4xl text-blue-500 mb-2"></i>
-              <span>WordPress</span>
-            </div>
-            <div
-              class="flex flex-col items-center p-6 bg-slate-800 rounded-lg card-hover"
-            >
-              <i class="fab fa-bootstrap text-4xl text-purple-500 mb-2"></i>
-              <span>BootStrap</span>
-            </div>
-            <div
-              class="flex flex-col items-center p-6 bg-slate-800 rounded-lg card-hover"
-            >
-              <i class="fab fa-linux text-4xl text-white mb-2"></i>
-              <span>Linux</span>
-            </div>
-            <div
-              class="flex flex-col items-center p-6 bg-slate-800 rounded-lg card-hover"
-            >
-              <i class="fas fa-microchip text-4xl text-cyan-400 mb-2"></i>
-              <span>Arduino</span>
             </div>
           </div>
         </div>
@@ -783,7 +732,8 @@
             <div class="p-6">
               <h3 class="text-xl font-bold mb-2">LOADING</h3>
               <p class="text-slate-400 mb-4">
-                ✨ Estou trabalhando em novos projetos e melhorias. Em breve você poderá ver tudo por aqui.
+                ✨ Estou trabalhando em novos projetos e melhorias. Em breve
+                você poderá ver tudo por aqui.
               </p>
               <div class="flex flex-wrap gap-2 mb-4">
                 <span class="px-3 py-1 bg-slate-700 rounded-full text-sm"
@@ -819,7 +769,8 @@
             <div class="p-6">
               <h3 class="text-xl font-bold mb-2">LOADING</h3>
               <p class="text-slate-400 mb-4">
-                🔧 Projetos em atualização no momento. Em pouco tempo esta área estará completa com novidades.
+                🔧 Projetos em atualização no momento. Em pouco tempo esta área
+                estará completa com novidades.
               </p>
               <div class="flex flex-wrap gap-2 mb-4">
                 <span class="px-3 py-1 bg-slate-700 rounded-full text-sm"
@@ -852,7 +803,8 @@
             <div class="p-6">
               <h3 class="text-xl font-bold mb-2">LOADING</h3>
               <p class="text-slate-400 mb-4">
-              🚧 Esta seção está em desenvolvimento e em breve novos projetos serão adicionados.
+                🚧 Esta seção está em desenvolvimento e em breve novos projetos
+                serão adicionados.
               </p>
               <div class="flex flex-wrap gap-2 mb-4">
                 <span class="px-3 py-1 bg-slate-700 rounded-full text-sm"
@@ -1160,20 +1112,22 @@
       const animateSkillBars = () => {
         const skillBars = document.querySelectorAll(".skill-progress");
         const skillsSection = document.getElementById("skills");
-        if (!skillsSection) return;
-        const skillsSectionTop = skillsSection.offsetTop;
+
+        const sectionTop = skillsSection.offsetTop;
+        const sectionHeight = skillsSection.offsetHeight;
+        const scrollY = window.scrollY;
         const windowHeight = window.innerHeight;
-        if (window.scrollY > skillsSectionTop - windowHeight + 200) {
+
+        if (scrollY > sectionTop - windowHeight + 150) {
           skillBars.forEach((bar) => {
-            const width = bar.style.width;
-            bar.style.width = "0";
-            setTimeout(() => {
-              bar.style.width = width;
-            }, 120);
+            const percent = bar.dataset.percent;
+            bar.style.width = percent + "%";
           });
+
           window.removeEventListener("scroll", animateSkillBars);
         }
       };
+
       window.addEventListener("scroll", animateSkillBars);
 
       (function () {
