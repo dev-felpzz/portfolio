@@ -4,9 +4,6 @@
 📍 São Paulo – SP, Brasil
 📧 fsantosaguiarpereira1@gmail.com
 
-Esse repositório contém o código e informações do meu portfólio pessoal hospedado em:
-🔗 https://dev-felpzz.github.io/portfolio/
-
 🌐 Sobre o Portfólio
 
 Meu portfólio é um site responsivo criado com HTML, CSS e JavaScript, onde apresento minhas habilidades, informações e contatos profissionais. Ele foi feito para mostrar quem eu sou, o que eu estudo e no que estou trabalhando atualmente.
@@ -34,11 +31,6 @@ Projetos – Destaque para meus projetos (em breve com mais conteúdos).
 
 Contato – Formas de entrar em contato comigo.
 
-🚀 Link ao Projeto
-
-🌍 Portfólio Online:
-➡️ https://dev-felpzz.github.io/portfolio/
-
 📫 Contato
 
 Fique à vontade para entrar em contato comigo!
@@ -50,6 +42,9 @@ Fique à vontade para entrar em contato comigo!
 🔗 https://github.com/dev-felpzz
 
 🔗 https://www.instagram.com/felpzz00
+
+🌍 Portfólio Online:
+➡️ https://dev-felpzz.github.io/portfolio/
 
 <img width="450" height="450" alt="qrcode_dev-felpzz github io" src="https://github.com/user-attachments/assets/39de493c-af74-4ab0-9f0d-5aa05fe4230c" />
 
