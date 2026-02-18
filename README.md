@@ -50,3 +50,6 @@ Fique à vontade para entrar em contato comigo!
 🔗 https://github.com/dev-felpzz
 
 🔗 https://www.instagram.com/felpzz00
+
+<img width="450" height="450" alt="qrcode_dev-felpzz github io" src="https://github.com/user-attachments/assets/39de493c-af74-4ab0-9f0d-5aa05fe4230c" />
+
