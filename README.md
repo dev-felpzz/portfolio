@@ -37,7 +37,7 @@ Fique à vontade para entrar em contato comigo!
 
 📧 fsantosaguiarpereira1@gmail.com
 
-🔗 [https://www.linkedin.com/in/seu-linkedin](https://br.linkedin.com/in/felipe-dos-santos-aguiar-pereira12)
+🔗 https://br.linkedin.com/in/felipe-dos-santos-aguiar-pereira12
 
 🔗 https://github.com/dev-felpzz
 
