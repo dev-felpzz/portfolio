@@ -1,46 +1,47 @@
-.parallax {
-  height: 80vh;
-  width: 100%;
+.parallax-bg {
+  position: relative;
 
-  background-attachment: fixed;
+  background-image: url("img/parallax-dark.jpg");
   background-size: cover;
   background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
 
-  transition: background-image 0.4s ease;
+/* Fix: background-attachment: fixed quebra no iOS Safari */
+@media (max-width: 768px) {
+  .parallax-bg {
+    background-attachment: scroll;
+  }
+}
 
-  /* imagem padrão (modo escuro) */
-  background-image: url("img/parallax-dark.jpg");
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  position: relative;
-  overflow: hidden;
+/* Fix: respeita preferência de movimento reduzido */
+@media (prefers-reduced-motion: reduce) {
+  .parallax-bg {
+    background-attachment: scroll;
+  }
 }
 
 /* Overlay escuro */
-.parallax::before {
+.parallax-bg::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.45);
+  z-index: 1;
+  background: rgba(0, 0, 0, 0.55);
 }
 
 /* Conteúdo acima do overlay */
-.parallax-content {
+.parallax-bg > div {
   position: relative;
   z-index: 2;
-  text-align: center;
-  color: white;
 }
 
-/* ☀️ Tema Claro */
-html.light .parallax {
-  background-image: url("img/parallax-light.jpg");
+/* Tema claro */
+html.light .parallax-bg {
+  background-image: url("img/parallax-light.png");
 }
 
-/* Overlay mais leve no modo claro */
-html.light .parallax::before {
-  background: rgba(255, 255, 255, 0.25);
+html.light .parallax-bg::before {
+  background: rgba(255, 255, 255, 0.69);
 }
