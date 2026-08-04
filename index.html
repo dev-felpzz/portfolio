@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="pt-BR" class="scroll-smooth">
+<html lang="pt-BR">
 
 <head>
   <meta charset="UTF-8" />
@@ -7,6 +7,7 @@
   <title>MEU PORTIFOLIO</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://unpkg.com/lenis@1.3.25/dist/lenis.css" />
   <link rel="shortcut icon" href="img/logo.png" type="image/x-icon" />
 
   <script>
@@ -15,13 +16,13 @@
       theme: {
         extend: {
           colors: {
-            primary: "#0067D4",
-            secondary: "#0B0D12",
-            dark: "#0B0D12",
-            darker: "#0F1F3D",
+            primary: "#f97316",
+            secondary: "#0a0500",
+            dark: "#0a0500",
+            darker: "#150a00",
           },
           fontFamily: {
-            sans: ["Inter", "sans-serif"],
+            sans: ["Poppins", "sans-serif"],
           },
         },
       },
@@ -29,53 +30,55 @@
   </script>
 
   <style>
-    @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
+    @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
 
     :root {
-      --primary: #0067d4;
-      --accent-dark: #004a9f;
+      --primary: #f97316;
+      --accent-dark: #ea580c;
 
-      --bg: #0b0d12;
-      --text: #ffffff;
-      --text-muted: rgba(255, 255, 255, 0.72);
+      --bg: #0a0500;
+      --text: #fff8f5;
+      --text-muted: rgba(255, 248, 245, 0.72);
 
-      --darker-bg: #0f1f3d;
+      --darker-bg: #150a00;
 
-      --card-bg-gradient: linear-gradient(145deg, #0b0d12, #0f1f3d);
-      --card-surface: #0f1420;
-      --card-border: #162b55;
+      --card-bg-gradient: linear-gradient(145deg, #1a0e00, #150a00);
+      --card-surface: #1a0e00;
+      --card-border: rgba(249, 115, 22, 0.18);
+      --card-border-hover: rgba(249, 115, 22, 0.55);
 
-      --input-bg: #0f1f3d;
-      --input-border: #1f3f7a;
+      --input-bg: #1a0e00;
+      --input-border: rgba(249, 115, 22, 0.3);
 
-      --nav-bg: rgba(11, 13, 18, 0.75);
-      --footer-bg: linear-gradient(135deg, #0b0d12, #0f1f3d);
+      --nav-bg: rgba(10, 5, 0, 0.75);
+      --footer-bg: linear-gradient(135deg, #0a0500, #1a0e00);
 
-      --icon-color: #ffffff;
+      --icon-color: #fff8f5;
       --icon-filter: invert(1);
     }
 
     html.light {
-      --bg: #f2f7ff;
-      --text: #0a0a0a;
-      --text-muted: rgba(0, 0, 0, 0.65);
+      --bg: #fff8f2;
+      --text: #1a0e00;
+      --text-muted: rgba(26, 14, 0, 0.78);
 
-      --primary: #0067d4;
-      --accent-dark: #004a9f;
+      --primary: #ea580c;
+      --accent-dark: #c2410c;
 
-      --darker-bg: #dcebff;
+      --darker-bg: #ffe9d9;
 
-      --card-bg-gradient: linear-gradient(145deg, #ffffff, #dcebff);
+      --card-bg-gradient: linear-gradient(145deg, #ffffff, #ffe9d9);
       --card-surface: #ffffff;
-      --card-border: rgba(0, 103, 212, 0.45);
+      --card-border: rgba(234, 88, 12, 0.35);
+      --card-border-hover: rgba(234, 88, 12, 0.6);
 
       --input-bg: #ffffff;
-      --input-border: rgba(0, 103, 212, 0.55);
+      --input-border: rgba(234, 88, 12, 0.45);
 
-      --nav-bg: rgba(242, 247, 255, 0.92);
-      --footer-bg: linear-gradient(135deg, #0067d4, #004a9f);
+      --nav-bg: rgba(255, 248, 242, 0.92);
+      --footer-bg: linear-gradient(135deg, #ea580c, #c2410c);
 
-      --icon-color: #000000;
+      --icon-color: #1a0e00;
       --icon-filter: invert(0);
     }
 
@@ -85,7 +88,7 @@
     }
 
     body {
-      font-family: "Inter", sans-serif;
+      font-family: "Poppins", sans-serif;
       background-color: var(--bg);
       color: var(--text);
       transition:
@@ -105,16 +108,21 @@
     }
 
     .card-hover:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 14px 32px rgba(0, 103, 212, 0.25);
+      transform: translateY(-6px);
+      box-shadow: 0 14px 40px rgba(249, 115, 22, 0.25);
     }
 
     .project-card {
       background: var(--card-bg-gradient);
+      border: 1px solid var(--card-border);
       box-shadow:
         6px 6px 20px rgba(0, 0, 0, 0.35),
-        -6px -6px 20px rgba(0, 103, 212, 0.15);
+        -6px -6px 20px rgba(249, 115, 22, 0.08);
       transition: all 220ms ease;
+    }
+
+    .project-card:hover {
+      border-color: var(--card-border-hover);
     }
 
     nav.fixed {
@@ -164,6 +172,7 @@
       width: 0;
       border-radius: 4px;
       background: linear-gradient(90deg, var(--primary), var(--accent-dark));
+      box-shadow: 0 0 12px rgba(249, 115, 22, 0.5);
       transition: width 1s ease-in-out;
     }
 
@@ -176,19 +185,20 @@
 
     .contact-input:focus {
       border-color: var(--primary);
-      box-shadow: 0 0 0 4px rgba(0, 103, 212, 0.22);
+      box-shadow: 0 0 0 4px rgba(249, 115, 22, 0.22);
       outline: none;
     }
 
     .btn-primary {
       background: linear-gradient(90deg, var(--primary), var(--accent-dark));
       color: #ffffff;
+      box-shadow: 0 0 24px rgba(249, 115, 22, 0.35);
       transition: all 0.22s ease;
     }
 
     .btn-primary:hover {
       transform: translateY(-2px);
-      box-shadow: 0 8px 22px rgba(0, 103, 212, 0.4);
+      box-shadow: 0 8px 30px rgba(249, 115, 22, 0.5);
     }
 
     .social-icon {
@@ -210,6 +220,7 @@
     .social-icon:hover {
       transform: translateY(-3px);
       color: var(--accent-dark);
+      box-shadow: 0 0 18px rgba(249, 115, 22, 0.35);
     }
 
     @keyframes float {
@@ -237,13 +248,15 @@
       border-radius: 0.5rem;
       cursor: pointer;
       background: transparent;
-      border: 1px solid rgba(255, 255, 255, 0.12);
+      border: 1px solid rgba(249, 115, 22, 0.22);
       color: var(--text);
       transition: all 0.15s ease;
     }
 
     .theme-toggle:hover {
       transform: translateY(-2px);
+      border-color: rgba(249, 115, 22, 0.5);
+      box-shadow: 0 0 14px rgba(249, 115, 22, 0.25);
     }
 
     .theme-toggle svg {
@@ -254,6 +267,13 @@
     footer {
       background: var(--footer-bg);
       color: #ffffff;
+    }
+
+    footer .text-slate-100,
+    footer .text-slate-200,
+    footer .text-slate-300,
+    footer .text-slate-400 {
+      color: rgba(255, 255, 255, 0.82) !important;
     }
 
     .bg-dark {
@@ -276,6 +296,7 @@
 
     .bg-slate-800 {
       background-color: var(--card-surface) !important;
+      border: 1px solid var(--card-border);
     }
 
     .border-slate-800 {
@@ -283,10 +304,12 @@
     }
 
     .bg-slate-700 {
-      background-color: rgba(0, 103, 212, 0.15) !important;
+      background-color: rgba(249, 115, 22, 0.15) !important;
     }
 
     .parallax-bg {
+      position: relative;
+
       background-image: url("img/parallax-dark.jpg");
       background-size: cover;
       background-position: center;
@@ -294,57 +317,188 @@
       background-repeat: no-repeat;
     }
 
-    html.light .parallax-bg {
-      background-image: url("img/parallax-light.png");
+    /* Fix: background-attachment: fixed quebra no iOS Safari */
+    @media (max-width: 768px) {
+      .parallax-bg {
+        background-attachment: scroll;
+      }
     }
 
+    /* Fix: respeita preferência de movimento reduzido */
+    @media (prefers-reduced-motion: reduce) {
+      .parallax-bg {
+        background-attachment: scroll;
+      }
+    }
+
+    /* Overlay escuro com toque laranja, igual ao hero do site de referência */
     .parallax-bg::before {
       content: "";
       position: absolute;
       inset: 0;
-      background: rgba(0, 0, 0, 0.55);
-      z-index: 0;
+      z-index: 1;
+      background:
+        linear-gradient(to bottom, rgba(10, 5, 0, 0.6) 0%, rgba(10, 5, 0, 0.35) 45%, rgba(10, 5, 0, 0.8) 100%),
+        radial-gradient(ellipse 80% 60% at 70% 50%, rgba(234, 88, 12, 0.18) 0%, transparent 70%);
     }
 
+    /* Conteúdo acima do overlay */
     .parallax-bg>div {
       position: relative;
       z-index: 2;
     }
 
-    /* Overlay no modo escuro */
-    .parallax-bg::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: rgba(0, 0, 0, 0.55);
-      z-index: 0;
+    /* Tema claro */
+    html.light .parallax-bg {
+      background-image: url("img/parallax-light.png");
     }
 
-    /* Overlay mais leve no modo claro */
     html.light .parallax-bg::before {
-      background: rgba(255, 255, 255, 0.69);
+      background: rgba(255, 248, 242, 0.75);
     }
 
     /* Texto da HOME escuro no modo claro */
     html.light #home {
-      color: #111 !important;
+      color: #1a0e00 !important;
     }
 
     html.light #home h1,
     html.light #home h2,
     html.light #home p,
     html.light #home a {
-      color: #111 !important;
+      color: #1a0e00 !important;
     }
 
-    /* Nome em azul continua destaque */
+    /* Nome em laranja continua destaque */
     html.light #home .gradient-text {
-      color: #0067d4 !important;
+      color: #ea580c !important;
+    }
+
+    /* ====== PARTICLES (full page, laranja neon, mesmo modelo do PixelFlow) ====== */
+    #particles {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    nav,
+    section,
+    footer,
+    .back-to-top {
+      position: relative;
+      z-index: 1;
+    }
+
+    /* Feixes de luz decorativos no hero, como no site de referência */
+    .hero-lines {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+      overflow: hidden;
+      pointer-events: none;
+    }
+
+    .hero-lines::before,
+    .hero-lines::after {
+      content: "";
+      position: absolute;
+      width: 1px;
+      height: 60%;
+      background: linear-gradient(to bottom, transparent, var(--primary), transparent);
+      animation: lineFlow 4s ease-in-out infinite;
+      opacity: 0.6;
+    }
+
+    .hero-lines::before {
+      left: 20%;
+      top: 15%;
+      animation-delay: 0s;
+    }
+
+    .hero-lines::after {
+      left: 80%;
+      top: 10%;
+      animation-delay: 2s;
+    }
+
+    @keyframes lineFlow {
+
+      0%,
+      100% {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+
+      50% {
+        opacity: 0.5;
+        transform: translateY(20px);
+      }
+    }
+
+    /* ====== LENIS SMOOTH SCROLL ====== */
+    html.lenis,
+    html.lenis body {
+      height: auto;
+    }
+
+    .lenis.lenis-smooth {
+      scroll-behavior: auto !important;
+    }
+
+    .lenis.lenis-smooth [data-lenis-prevent] {
+      overscroll-behavior: contain;
+    }
+
+    .lenis.lenis-stopped {
+      overflow: hidden;
+    }
+
+    /* Corrige contraste: no tema claro, o "text-primary" do Tailwind é fixo
+       e claro demais sobre fundos claros. Usamos um laranja mais escuro. */
+    html.light .text-primary {
+      color: var(--accent-dark) !important;
+    }
+
+    html.light .border-primary {
+      border-color: var(--accent-dark) !important;
+    }
+
+    /* ====== FLUIDEZ / REVEAL ====== */
+    .reveal {
+      opacity: 0;
+      transform: translateY(36px) scale(0.985);
+      transition:
+        opacity 0.9s cubic-bezier(.16, 1, .3, 1),
+        transform 0.9s cubic-bezier(.16, 1, .3, 1);
+      will-change: opacity, transform;
+    }
+
+    .reveal.in {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+
+    .reveal-stagger>* {
+      transition-delay: calc(var(--i, 0) * 90ms);
+    }
+
+    * {
+      transition-timing-function: cubic-bezier(.16, 1, .3, 1);
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .reveal {
+        opacity: 1 !important;
+        transform: none !important;
+        transition: none !important;
+      }
     }
   </style>
 </head>
 
 <body class="bg-dark text-slate-200">
+  <canvas id="particles" aria-hidden="true"></canvas>
   <nav class="fixed w-full bg-darker/80 backdrop-blur-sm z-50 shadow-lg">
     <div class="container mx-auto px-6 py-4">
       <div class="flex justify-between items-center">
@@ -413,7 +567,8 @@
     </div>
   </nav>
 
-  <section id="home" class="min-h-screen flex items-center pt-20 parallax-bg">
+  <section id="home" class="min-h-screen flex items-center pt-20 relative overflow-hidden">
+    <div class="hero-lines"></div>
     <div class="container mx-auto px-6 flex flex-col md:flex-row items-center justify-between">
       <div class="md:w-1/2 mb-12 md:mb-0">
         <h1 class="text-4xl md:text-6xl font-bold mb-4">
@@ -441,7 +596,7 @@
           </a>
 
           <a href="www.linkedin.com/in/felipe-dos-santos-aguiar-pereira12" target="_blank"
-            class="social-icon text-xl w-10 h-10 flex items-center justify-center rounded-full bg-slate-800 hover:bg-blue-600">
+            class="social-icon text-xl w-10 h-10 flex items-center justify-center rounded-full bg-slate-800 hover:bg-primary">
             <i class="fab fa-linkedin-in"></i>
           </a>
 
@@ -477,7 +632,7 @@
       </div>
 
       <!-- Card Sobre -->
-      <div class="max-w-4xl mx-auto bg-slate-800 rounded-2xl p-10 shadow-lg card-hover">
+      <div class="max-w-4xl mx-auto bg-slate-800 rounded-2xl p-10 shadow-lg card-hover reveal">
         <h3 class="text-2xl font-bold mb-4">👋 Quem sou eu?</h3>
 
         <p class="text-slate-300 leading-relaxed mb-8">
@@ -539,7 +694,7 @@
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
         <!-- Habilidades Técnicas -->
-        <div>
+        <div class="reveal">
           <h3 class="text-2xl font-bold mb-6">Habilidades Técnicas</h3>
           <div class="space-y-6">
             <div>
@@ -575,7 +730,7 @@
         </div>
 
         <!-- Habilidades Profissionais -->
-        <div>
+        <div class="reveal">
           <h3 class="text-2xl font-bold mb-6">Habilidades Profissionais</h3>
           <div class="space-y-6">
             <div>
@@ -623,7 +778,7 @@
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <div class="project-card rounded-xl overflow-hidden card-hover">
+        <div class="project-card rounded-xl overflow-hidden card-hover reveal">
           <div class="h-48 overflow-hidden">
             <img src="img/projeto1.png" alt="Project 1" class="w-full h-full object-cover" />
           </div>
@@ -647,7 +802,7 @@
           </div>
         </div>
 
-        <div class="project-card rounded-xl overflow-hidden card-hover">
+        <div class="project-card rounded-xl overflow-hidden card-hover reveal">
           <div class="h-48 overflow-hidden">
             <img src="img/cadastro.png" alt="Tela de Cadastro" class="w-full h-full object-cover" />
           </div>
@@ -676,7 +831,7 @@
           </div>
         </div>
 
-        <div class="project-card rounded-xl overflow-hidden card-hover">
+        <div class="project-card rounded-xl overflow-hidden card-hover reveal">
           <div class="h-48 overflow-hidden">
             <img src="img/breve.png" alt="Serviço Fácil" class="w-full h-full object-cover" />
           </div>
@@ -712,9 +867,9 @@
           </div>
         </div>
 
-        <div class="text-center mt-12">
+        <div class="text-center mt-12 col-span-full">
           <a href="https://github.com/dev-felpzz?tab=repositories"
-            class="px-8 py-3 rounded-full btn-primary font-medium inline-flex items-center">
+            class="px-8 py-3 rounded-full btn-primary font-medium inline-flex items-center justify-center">
             Mais projetos <i class="fas fa-arrow-right ml-2"></i>
           </a>
         </div>
@@ -731,7 +886,7 @@
       </div>
 
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
-        <div>
+        <div class="reveal">
           <h3 class="text-2xl font-bold mb-6">Informações de contato</h3>
           <p class="text-slate-400 mb-8">
             Sinta-se à vontade para entrar em contato comigo caso tenha alguma
@@ -781,7 +936,7 @@
               </a>
 
               <a href="https://www.linkedin.com/in/felipe-dos-santos-aguiar-pereira12/" target="_blank"
-                class="social-icon text-xl w-10 h-10 flex items-center justify-center rounded-full bg-slate-800 hover:bg-blue-600">
+                class="social-icon text-xl w-10 h-10 flex items-center justify-center rounded-full bg-slate-800 hover:bg-primary">
                 <i class="fab fa-linkedin-in"></i>
               </a>
 
@@ -793,7 +948,7 @@
           </div>
         </div>
 
-        <div>
+        <div class="reveal">
           <h3 class="text-2xl font-bold mb-6">Mande uma mensagem</h3>
           <form action="https://formspree.io/f/mjgeyljp" method="POST">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -827,11 +982,10 @@
     </div>
   </section>
 
-  <footer class="bg-darker py-12">
+  <footer class="py-12">
     <div class="container mx-auto px-6">
       <div class="flex flex-col md:flex-row justify-between items-center">
         <div class="mb-6 md:mb-0">
-          <a href="#" class="text-2xl font-bold gradient-text">Portfolio</a>
           <p class="text-slate-400 mt-2">
             © 2025 Felipe dos Santos Aguiar Pereira.
           </p>
@@ -844,7 +998,7 @@
           </a>
 
           <a href="https://www.linkedin.com/in/felipe-dos-santos-aguiar-pereira12/" target="_blank"
-            class="social-icon text-xl w-10 h-10 flex items-center justify-center rounded-full bg-slate-800 hover:bg-blue-600">
+            class="social-icon text-xl w-10 h-10 flex items-center justify-center rounded-full bg-slate-800 hover:bg-primary">
             <i class="fab fa-linkedin-in"></i>
           </a>
 
@@ -862,7 +1016,114 @@
     <i class="fas fa-arrow-up"></i>
   </button>
 
+  <script src="https://unpkg.com/lenis@1.3.25/dist/lenis.min.js"></script>
   <script>
+    // ====== LENIS SMOOTH SCROLL ======
+    // Dá aquele scroll com "inércia" suave, em vez do scroll seco padrão do navegador.
+    const lenis = new Lenis({
+      lerp: 0.1,          // 0 = trava no lugar, 1 = sem suavização. 0.1 é bem fluido.
+      duration: 1.2,
+      wheelMultiplier: 1,
+      touchMultiplier: 1.3,
+      smoothWheel: true,
+      autoRaf: true,       // Lenis já cuida do requestAnimationFrame sozinho
+    });
+
+    // Mantém o header, as partículas e o reveal-on-scroll sincronizados com o Lenis
+    lenis.on("scroll", () => {
+      const backToTopButton = document.getElementById("back-to-top");
+      if (backToTopButton) {
+        if (window.scrollY > 300) backToTopButton.classList.remove("hidden");
+        else backToTopButton.classList.add("hidden");
+      }
+    });
+
+    // ====== PARTICLES (dots flutuantes + linhas de conexão, full-page, laranja neon) ======
+    (function () {
+      const canvas = document.getElementById("particles");
+      if (!canvas) return;
+      const reduceMotion = matchMedia("(prefers-reduced-motion: reduce)").matches;
+      const ctx = canvas.getContext("2d");
+      let w, h, particles = [];
+      const DENSITY = 12000; // px² por partícula
+      const LINK_DIST = 130;
+
+      function resize() {
+        w = canvas.width = window.innerWidth;
+        h = canvas.height = document.documentElement.scrollHeight;
+        const count = Math.min(150, Math.round((w * window.innerHeight) / DENSITY));
+        particles = Array.from({ length: count }, () => ({
+          x: Math.random() * w,
+          y: Math.random() * window.innerHeight,
+          vx: (Math.random() - 0.5) * 0.3,
+          vy: (Math.random() - 0.5) * 0.3,
+          r: Math.random() * 1.6 + 0.4,
+        }));
+      }
+
+      function step() {
+        const dot = "rgba(249,115,22,";
+        const line = "rgba(234,88,12,";
+
+        ctx.clearRect(0, 0, w, h);
+
+        particles.forEach((p) => {
+          p.x += p.vx;
+          p.y += p.vy;
+          if (p.x < 0 || p.x > w) p.vx *= -1;
+          if (p.y < 0 || p.y > window.innerHeight) p.vy *= -1;
+        });
+
+        for (let i = 0; i < particles.length; i++) {
+          const a = particles[i];
+          for (let j = i + 1; j < particles.length; j++) {
+            const b = particles[j];
+            const dx = a.x - b.x, dy = a.y - b.y;
+            const dist = Math.hypot(dx, dy);
+            if (dist < LINK_DIST) {
+              ctx.beginPath();
+              ctx.strokeStyle = line + (1 - dist / LINK_DIST) * 0.3 + ")";
+              ctx.lineWidth = 1;
+              ctx.moveTo(a.x, a.y);
+              ctx.lineTo(b.x, b.y);
+              ctx.stroke();
+            }
+          }
+        }
+
+        particles.forEach((p) => {
+          ctx.beginPath();
+          ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+          ctx.fillStyle = dot + (Math.random() * 0.3 + 0.35) + ")";
+          ctx.fill();
+        });
+
+        if (!reduceMotion) requestAnimationFrame(step);
+      }
+
+      window.addEventListener("resize", resize);
+      resize();
+      step();
+    })();
+
+    // ====== REVEAL ON SCROLL ======
+    (function () {
+      const items = document.querySelectorAll(".reveal");
+      if (!items.length) return;
+      const io = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((e) => {
+            if (e.isIntersecting) {
+              e.target.classList.add("in");
+              io.unobserve(e.target);
+            }
+          });
+        },
+        { threshold: 0.15 }
+      );
+      items.forEach((el) => io.observe(el));
+    })();
+
     const menuToggle = document.getElementById("menu-toggle");
     const mobileMenu = document.getElementById("mobile-menu");
 
@@ -876,10 +1137,7 @@
         const targetId = this.getAttribute("href");
         const targetElement = document.querySelector(targetId);
         if (targetElement) {
-          window.scrollTo({
-            top: targetElement.offsetTop - 80,
-            behavior: "smooth",
-          });
+          lenis.scrollTo(targetElement, { offset: -80, duration: 1.3 });
           if (!mobileMenu.classList.contains("hidden")) {
             mobileMenu.classList.add("hidden");
           }
@@ -908,14 +1166,10 @@
           });
         }
       });
-
-      const backToTopButton = document.getElementById("back-to-top");
-      if (scrollPosition > 300) backToTopButton.classList.remove("hidden");
-      else backToTopButton.classList.add("hidden");
     });
 
     document.getElementById("back-to-top").addEventListener("click", () => {
-      window.scrollTo({ top: 0, behavior: "smooth" });
+      lenis.scrollTo(0, { duration: 1.3 });
     });
 
     const animateSkillBars = () => {
@@ -994,5 +1248,4 @@
     })();
   </script>
 </body>
-
 </html>
